@@ -1,0 +1,15 @@
+Report created by Gatling can be found in resources.
+
+It seems that there is issue with tested app under heavy load.
+With currently set up scenario the application starts to fail around 1500 of active users.
+What can be seen is the slow degradation of number of requests per second. In the same time app catches some breath after some time and starts to process again but with less capacity over time.
+Some resources exhaustion is visible there.
+
+Looking at system wide most probably DB is the root cause. After some time some process spawned by java with *mongo* in name is taking 100% of all CPU cores.
+Killing the app is finished with multiple errors related to timeout.
+
+Java GC analysis wasn't done as app wasn't configured to create GC logs. Even if app would have GC pauses the outcome would different.
+According to past experience we would see pause in processing (cased by full GC) and then app should work normally.
+
+Out of total 2.5k failed samples 90% failed with timeout - rest of errors is generally connected with lack of session properties what is most probably caused by first problem.
+
