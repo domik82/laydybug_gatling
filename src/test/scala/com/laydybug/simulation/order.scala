@@ -18,7 +18,7 @@ class order extends Simulation {
 //        This is not the case here - I used order_request_example.txt to execute request with 2 products
 //        I thought that learning how to create proper json is not the case here (it can be done other time)
 //        2. Confirm product by employee has "assumption"/"workaround" - because lack of time I didn't had chance to implement paging
-//        Instead I used trick to get 500 orders on single page. The problem with that approach is that once all 500 orders
+//        Instead I used trick to get 500/1000 orders on single page. The problem with that approach is that once all orders on first page
 //        will be confirmed test will start to fail
 //        3. There is no proper exit/fail fast strategy - sometimes test fails in random manner and threads keep working
 //        This should be fixed to avoid exceptions in build log
