@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5c128cc58d41fd42f44e96bc",
+    "name": "Testowy produkt 1"
+  },
+  {
+    "id": "5c128cc58d41fd42f44e96bd",
+    "name": "Testowy produkt 2"
+  },
+  {
+    "id": "5c128cc58d41fd42f44e96be",
+    "name": "Testowy produkt 3"
+  },
+  {
+    "id": "5c128cc58d41fd42f44e96bf",
+    "name": "Testowy produkt 4"
+  },
+  {
+    "id": "5c128cc58d41fd42f44e96c0",
+    "name": "Testowy produkt 5"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "DRAFT",
+    "name": "Robocze"
+  },
+  {
+    "id": "ACCEPTED",
+    "name": "Zaakceptowane"
+  },
+  {
+    "id": "SEND_TO_PACKING",
+    "name": "Wysłane do pakowania"
+  },
+  {
+    "id": "DELIVERY",
+    "name": "Dowóz"
+  },
+  {
+    "id": "COMPLETED",
+    "name": "Zakończone"
+  },
+  {
+    "id": "CANCELED",
+    "name": "Anulowane"
+  }
+]

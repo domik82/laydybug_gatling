@@ -1,0 +1,113 @@
+As being new to Scala / Gatling I have spend huge amount of time on solving "trivial" scenarios
+
+# 1. Storing data in session
+
+Assume that you need to extract some data from response and pass it to another method.
+One of the ways I wanted to do that was something like that:
+
+    def get_order_details(order_id: String): HttpRequestBuilder = {
+      println("get_order_details order_id %s".format(order_id))
+      return http("get_order_details")
+        .get("/api/orders/%s".format(order_id))
+        .headers(commonHeader)
+        .check(jsonPath("$.id").exists)
+        .check(jsonPath("$.id").saveAs("order_id"))
+        .check(jsonPath("$").saveAs("full_order"))
+    }
+
+And then execute it in session in a way:
+
+    .exec { session => {
+      Orders.get_order_details(session("randomOrderId").as[String])
+      println("after get_order_details")
+      println(session("order_id").as[String])
+      println(session("full_order").as[String])
+      session
+    }
+    }
+This was one of the biggest mistakes I did in approach and I lost significant amount of time trying to figure out what I did wrongly.
+The catch here is that returned session is the original one (not updated by check with saveAs). Even after execution of
+the code the new properties that should be in session were empty.
+
+The proper way of extracting data from session that I found is to save values to session (in this case randomOrderId)
+and then extract those in ${randomOrderId} notation.
+
+Few prepared sections of the code had to be refactored:
+Proper way of setting up session variables is:
+
+    .exec { session =>
+      // return a new session instance with a new "foo" attribute whose value is "bar"
+      session.set("foo", "bar")
+    }
+
+or
+
+    .exec(_.set("foo", "bar"))
+
+
+# 2. jsonPath notation - this one doesn't seem to work in same manner as on http://jsonpath.com/ that I used for validation.
+Assume you have json like below one:
+[
+  [
+    {
+      "id": "5c128cc48d41fd42f44e96aa",
+      "name": "Client Test 1"
+    }
+  ]
+]
+
+$.[id] is extracting
+[
+  "5c128cc48d41fd42f44e96aa"
+]
+
+Case $..id returns exactly same output but doesn't throw exception - couldn't figure out what is wrong with first one
+
+
+
+# 3. Json modification - I tried at least few of different fancy ways to update key/value in the json file.
+Finally it occurred that simple merge of two json objects is enough.
+First grab raw_json body and parse it to object and then merge new values with the output.
+
+    val json = Json parse raw_json
+    val updatedJson = json.as[JsObject] ++ Json.obj("status" -> value)
+
+Creating output string was done by library:
+
+    val jsonString = Json.stringify(updatedJson)
+
+# 4. Output of .check(jsonPath(...).findAll.saveAs("obtainedList") without any modification creates a Vector with the grabbed list of items.
+ Now if one would extract content it seems there is big chance to fail with multiple approaches.
+ Inside we have Vector of size 1 with string inside containing items separated by coma.
+
+ So  assume obtainedList is equal to session("order_list_by_status").asOption[String]
+ First catch is asOption so it's not simple String nor map or list.
+
+ Few failed approaches to extract data was:
+  - obtainedList.toList
+  - obtainedList.asInstanceOf[Seq[Any]]
+  - obtainedList.asInstanceOf[List[String]
+
+ One way that worked was similar to .map(_.split(",")).toList.flatten but - it had few bug in it.
+
+ It occurred that the elements had space and had to be trimmed.
+ Next that at first seemed to be random error - was at the end wrong conversion and value had "Vector(" prefix.
+
+ Proper way of doing it is to transform extracted data in ht beginning.
+
+.check(jsonPath("$.content[?(@.status == '" + order_status + "')].id").findAll.transform(_.mkString(",").toSeq).saveAs("order_list_by_status"))
+
+
+# 4. Bug in Scala parser in IntelliJ (even latest one 2018.3.1)
+I was trying to figure out how to do some conditional execution. At the end it occurred that this is IntelliJ issue as code is compiling properly.
+There is even issue reported since a year https://youtrack.jetbrains.net/issue/SCL-12621 (need to update it with this repo)
+
+Error thrown by below code: Type mismatch, expected: ChainBuilder, actual: B
+
+    .doIfEquals("${debug}", "true") {
+      exec(session => {
+        println("######## DEBUG #########")
+        session
+      })
+    }
+

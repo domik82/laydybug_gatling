@@ -1,0 +1,30 @@
+{
+  "id": "5c13fbca8d41fd42f44e96c9",
+  "items": [
+    {
+      "product": {
+        "id": "5c128cc58d41fd42f44e96bc",
+        "name": "Testowy produkt 1",
+        "category": {
+          "id": "5c128cc58d41fd42f44e96ad",
+          "name": "Test 1"
+        },
+        "company": "TEST",
+        "price": 1.0
+      },
+      "quantity": 1
+    }
+  ],
+  "client": {
+    "id": "5c128cc48d41fd42f44e96aa",
+    "username": "client",
+    "lastName": "Test 1",
+    "firstName": "Client",
+    "homeNo": 0,
+    "flatNo": 0,
+    "zipCode": 0,
+    "role": "CLIENT"
+  },
+  "orderDate": "2018-12-14 19:51:54",
+  "status": "DRAFT"
+}

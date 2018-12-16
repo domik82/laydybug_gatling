@@ -1,0 +1,28 @@
+{
+  "status":"DRAFT",
+  "orderDate":"2018-12-14 17:28:16",
+  "items":[
+    {
+      "id":0,
+      "isEditing":false,
+      "product":{
+        "id":"5c128cc58d41fd42f44e96bc",
+        "name":"Testowy produkt 1"
+      },
+      "quantity":1
+    },
+    {
+      "id":1,
+      "isEditing":false,
+      "product":{
+        "id":"5c128cc58d41fd42f44e96bd",
+        "name":"Testowy produkt 2"
+      },
+      "quantity":1
+    }
+  ],
+  "client":{
+    "id":"5c128cc48d41fd42f44e96aa",
+    "name":"Client Test 1"
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "content": [
+    {
+      "id": "5c128cc58d41fd42f44e96c1",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 9
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bd",
+            "name": "Testowy produkt 2",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 2.0
+          },
+          "quantity": 20
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-13 17:45:57",
+      "status": "DRAFT"
+    },
+    {
+      "id": "5c128cc58d41fd42f44e96c2",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96be",
+            "name": "Testowy produkt 3",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 4.0
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bf",
+            "name": "Testowy produkt 4",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 8.0
+          },
+          "quantity": 10
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96c0",
+            "name": "Testowy produkt 5",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 16.0
+          },
+          "quantity": 100
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-13 17:45:57",
+      "status": "DRAFT"
+    },
+    {
+      "id": "5c128cc58d41fd42f44e96c3",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96be",
+            "name": "Testowy produkt 3",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 4.0
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96c0",
+            "name": "Testowy produkt 5",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 16.0
+          },
+          "quantity": 5
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-13 17:45:57",
+      "status": "ACCEPTED"
+    },
+    {
+      "id": "5c129c2d8d41fd42f44e96c4",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96be",
+            "name": "Testowy produkt 3",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ae",
+              "name": "Test 2"
+            },
+            "company": "TEST",
+            "price": 4.0
+          },
+          "quantity": 2
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-13 18:51:41",
+      "status": "ACCEPTED"
+    },
+    {
+      "id": "5c129cfe8d41fd42f44e96c5",
+      "items": [],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-13 18:55:10",
+      "status": "ACCEPTED"
+    },
+    {
+      "id": "5c13d7818d41fd42f44e96c6",
+      "items": [],
+      "orderDate": "2018-12-14 17:17:05",
+      "status": "CANCELED"
+    },
+    {
+      "id": "5c13d7d58d41fd42f44e96c7",
+      "items": [],
+      "orderDate": "2018-12-14 17:18:29",
+      "status": "DRAFT"
+    },
+    {
+      "id": "5c13da3c8d41fd42f44e96c8",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bd",
+            "name": "Testowy produkt 2",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 2.0
+          },
+          "quantity": 1
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-14 17:28:44",
+      "status": "DRAFT"
+    },
+    {
+      "id": "5c13fbca8d41fd42f44e96c9",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 1
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-14 19:51:54",
+      "status": "DRAFT"
+    },
+    {
+      "id": "5c14171f8d41fd42f44e96ca",
+      "items": [
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bc",
+            "name": "Testowy produkt 1",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 1.0
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "5c128cc58d41fd42f44e96bd",
+            "name": "Testowy produkt 2",
+            "category": {
+              "id": "5c128cc58d41fd42f44e96ad",
+              "name": "Test 1"
+            },
+            "company": "TEST",
+            "price": 2.0
+          },
+          "quantity": 1
+        }
+      ],
+      "client": {
+        "id": "5c128cc48d41fd42f44e96aa",
+        "username": "client",
+        "lastName": "Test 1",
+        "firstName": "Client",
+        "homeNo": 0,
+        "flatNo": 0,
+        "zipCode": 0,
+        "role": "CLIENT"
+      },
+      "orderDate": "2018-12-14 21:48:31",
+      "status": "ACCEPTED"
+    }
+  ],
+  "last": false,
+  "totalPages": 5,
+  "totalElements": 42,
+  "size": 10,
+  "number": 0,
+  "first": true,
+  "numberOfElements": 10
+}
