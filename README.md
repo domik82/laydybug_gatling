@@ -31,3 +31,10 @@ ToDo:
     in this framework is complicated especially when some "random" issue will show up.
     Scala tutorial would probably be helpful. There were multiple issues without any clear solution that could be easily 
     found in documentation.
+    
+# Ladybug application
+This is an application that can used to teach about testing (it is in polish language). There are multiple issues 
+visible on first sight ;) 
+
+Application was created by **Emilia Lendzion-Barszcz** on "*hackathon*" orginzed by Girls Who Test organization and javagirl. 
+You can find more about her at blog javagirl.pl
