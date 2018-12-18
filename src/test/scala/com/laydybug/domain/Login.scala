@@ -14,7 +14,6 @@ object Login {
     return http("login")
       .post("/login")
       .headers(Headers.login_headers_0)
-      //    .formParam("username", "employee")
       .formParam("username", username)
       .formParam("password", password)
       .resources(get_icon)
